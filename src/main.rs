@@ -14,7 +14,11 @@ pub fn not_tested() -> u32 {
 }
 
 pub fn greater_than_5(num: u32) -> u32 {
-    if num > 5 { 1 } else { 0 }
+    if num > 5 {
+         1
+         } else {
+             0
+             }
 }
 
 #[cfg(test)]
@@ -32,14 +36,15 @@ mod tests {
     }
 
     #[test]
-    
     fn test_greater_than_5() {
         assert_eq!(greater_than_5(6), 1);
+        // assert_eq!(greater_than_5(4), 0);
     }
 
     #[test]
     #[should_panic]
     fn test_no_greater_than_5() {
         assert_eq!(greater_than_5(4), 1);
+       
     }
 }

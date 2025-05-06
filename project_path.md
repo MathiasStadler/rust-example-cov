@@ -72,6 +72,12 @@ mod tests {
     fn test_not_tested() {
         assert_eq!(not_tested(), 43);
     }
+
+    #[test]
+    #[should_panic]
+    fn test_no_greater_than_5() {
+        assert_eq!(greater_than_5(4), 1);
+    }
 }
 EOF
 ```
@@ -126,9 +132,17 @@ cargo tarpaulin --out Lcov
 
 #or
 cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --skip-clean
-cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --skip-clean
 ```
 <!--- THis empty line inside the block is necessary for correct format -->
+&nbsp;
+
+### Speed up Run cargo-tarpaulin inside this project - run /w --target-dir and --skip-clean
+
+```bash<!-- markdownlint-disable-line code-block-style -->
+# run /w --target-dir and --skip-clean
+cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --skip-clean
+```
+<!-- --><!--- THis empty line inside the block is necessary for correct format -->
 &nbsp;
 
 > [!NOTE]
@@ -138,7 +152,17 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 > 2. rust-example-cov/target/tarpaulin/rust-example-cov-coverage.json
 <!-- -->
 
-## 
+> [!NOTE]
+> [How To Take A Screenshot under Linux | Computing](https://www.maths.cam.ac.uk/computing/linux/X/screenshots#:~:text=Use%20the%20shortcut%20key%20PrintScreen,will%20capture%20the%20whole%20desktop.)
+> Use the shortcut key PrintScreen to capture the whole
+> desktop and Alt+PrintScreen to capture the current
+> window (these also work under Windows).
+
+### Enable Show Line Coverage Show Line Coverage in MS VSCode
+
+- Edit the settings of the MS VSCode extension coverage-gutters
+- select for that the settings (gear) icon in the extension overview
+- select the extension option - see image [Show Line Coverage](./img/coverage-gutters-show-line-coverage.png)
 
 ## GITHUB Marker
 
