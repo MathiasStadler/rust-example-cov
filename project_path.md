@@ -67,16 +67,23 @@ mod tests {
     }
 
     #[test]
-    fn test_not_answer() {
-        assert_eq!(not_answer(), 43);
+    fn test_not_tested() {
+        assert_eq!(not_tested(), 43);
     }
 }
 EOF
 ```
 
-## Add method call to fn main inside /src/main.rs
+## [Inserting an additional command line to call a function in the same file](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
 
-- sed /a => append
+### [sed option](https://linux.die.net/man/1/sed)
+
+- -i -> replace insert the file
+
+### {regex flags}[https://www.codeguage.com/courses/regexp/flags]
+
+- /a -> append to the match find by regex
+- \t -> add a tabulator
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 sed -i  '/println!("Hello, world!");/a\
@@ -89,14 +96,22 @@ sed -i  '/println!("Hello, world!");/a\
 > [!NOTE]
 > [When should I use \A in a regex?](https://stackoverflow.com/questions/2650549/when-should-i-use-a-in-a-regex)
 
-weiter
-https://www.google.com/search?q=What+is+%27%5Ca%27+in+regex%3F&client=firefox-b-e&sca_esv=274d2c2221d041eb&channel=entpr&sxsrf=AHTn8zpBUdtjWPA3hrqo-QMjpZU0xgnZxw%3A1746519625394&ei=ScYZaJ7xF9Hs7_UPjbX88AI&ved=0ahUKEwjeufXOtI6NAxVR9rsIHY0aHy4Q4dUDCBA&uact=5&oq=What+is+%27%5Ca%27+in+regex%3F&gs_lp=Egxnd3Mtd2l6LXNlcnAiFldoYXQgaXMgJ1xhJyBpbiByZWdleD8yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHkjUbFC7KVinPHACeAGQAQCYAVGgAe4BqgEBM7gBA8gBAPgBAZgCBaAC1gLCAgoQABiwAxjWBBhHmAMAiAYBkAYHkgcDNC4xoAfeEbIHAzIuMbgHsAI&sclient=gws-wiz-serp 
-
 ## Run unit test
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 cargo test
 ```
+
+## install extension tarpulin
+
+> [!NOTE]
+> [How do I list all of the packages I've installed **globally** with cargo install?](https://stackoverflow.com/questions/60857222/how-do-i-list-all-of-the-packages-ive-installed-globally-with-cargo-install)
+>
+> ```bash<!-- markdownlint-disable-line code-block-style -->
+> cargo install --list
+> ```
+><!--- THis empty line inside the block is necessary for correct format -->
+&nbsp;
 
 ## GITHUB Marker
 

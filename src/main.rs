@@ -24,7 +24,7 @@ mod tests {
     }
 
     #[test]
-    fn test_not_answer() {
-        assert_eq!(not_answer(), 43);
+    fn test_not_tested() {
+        assert_eq!(not_tested(), 43);
     }
 }
