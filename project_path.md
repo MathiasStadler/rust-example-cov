@@ -90,8 +90,8 @@ EOF
 
 ### [regex flags - Inside an expression](https://www.codeguage.com/courses/regexp/flags)
 
-- /a -> append to the match find by regex
-- \t -> add a tabulator
+- /a `&rarr;` append to the match find by regex
+- \t `&rarr;` add a tabulator
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 sed -i  '/println!("Hello, world!");/a\
@@ -129,9 +129,6 @@ cargo install cargo-tarpaulin
 
 ```bash<!-- markdownlint-disable-line code-block-style -->
 cargo tarpaulin --out Lcov
-
-#or
-cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --skip-clean
 ```
 <!--- THis empty line inside the block is necessary for correct format -->
 &nbsp;
@@ -162,8 +159,9 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 - Edit the settings of the MS VSCode extension **coverage-gutters**
 - Select for that the settings (gear) icon in the extension overview
 - Select the extension option [Show Line Coverage](./img/coverage-gutters-show-line-coverage.png) - see image
+- Select all Boxes
 
-## GITHUB Marker
+## Markdown Marker - works on GitHub
 
 > [!NOTE]
 > Useful information that users should know, even when skimming content
@@ -179,3 +177,12 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 <!-- -->
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions
+
+## Markdown arrow - works on GitHub
+
+- Up arrow (↑): `&uarr;`
+- Down arrow (↓): `&darr;`
+- Left arrow (←): `&larr;`
+- Right arrow (→): `&rarr;`
+- Double headed arrow (↔): `&harr;`
+  
