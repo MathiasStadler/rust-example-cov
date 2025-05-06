@@ -50,11 +50,13 @@ touch README.md \
 ```bash <!-- markdownlint-disable-line code-block-style -->
 cat << EOF >> ./src/main.rs
 pub fn answer() -> u32 {
-    42
+    // for coverage is a instruction necessary
+    42 + 0
 }
 
 pub fn not_answer() -> u32 {
-    43
+    // for coverage is a instruction necessary
+    43 + 0
 }
 
 #[cfg(test)]
@@ -76,11 +78,11 @@ EOF
 
 ## [Inserting an additional command line to call a function in the same file](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
 
-### [sed option](https://linux.die.net/man/1/sed)
+### [option - Command option for the command itself](https://linux.die.net/man/1/sed)
 
 - -i -> replace insert the file
 
-### {regex flags}[https://www.codeguage.com/courses/regexp/flags]
+### [regex flags - Inside an expression](https://www.codeguage.com/courses/regexp/flags)
 
 - /a -> append to the match find by regex
 - \t -> add a tabulator
@@ -102,8 +104,12 @@ sed -i  '/println!("Hello, world!");/a\
 cargo test
 ```
 
-## install extension tarpulin
+## install extension cargo-tarpaulin
 
+```bash <!-- markdownlint-disable-line code-block-style -->
+cargo install cargo-tarpaulin
+```
+<!--- THis empty line is necessary for correct format -->
 > [!NOTE]
 > [How do I list all of the packages I've installed **globally** with cargo install?](https://stackoverflow.com/questions/60857222/how-do-i-list-all-of-the-packages-ive-installed-globally-with-cargo-install)
 >
@@ -112,6 +118,27 @@ cargo test
 > ```
 ><!--- THis empty line inside the block is necessary for correct format -->
 &nbsp;
+
+### Run cargo-tarpaulin inside this project
+
+```bash<!-- markdownlint-disable-line code-block-style -->
+cargo tarpaulin --out Lcov
+
+#or
+cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --skip-clean
+cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --skip-clean
+```
+<!--- THis empty line inside the block is necessary for correct format -->
+&nbsp;
+
+> [!NOTE]
+> The command will generate two files
+>
+> 1. lcov.info
+> 2. rust-example-cov/target/tarpaulin/rust-example-cov-coverage.json
+<!-- -->
+
+## 
 
 ## GITHUB Marker
 
