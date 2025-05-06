@@ -100,7 +100,7 @@ sed -i  '/println!("Hello, world!");/a\
 
 > [!NOTE]
 > [Insert line after match using sed](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
-&nbsp;
+<!-- -->
 > [!NOTE]
 > [When should I use \A in a regex?](https://stackoverflow.com/questions/2650549/when-should-i-use-a-in-a-regex)
 
@@ -117,7 +117,7 @@ cargo install cargo-tarpaulin
 ```
 <!--- THis empty line is necessary for correct format -->
 > [!NOTE]
-> [How do I list all of the packages I've installed **globally** with cargo install?](https://stackoverflow.com/questions/60857222/how-do-i-list-all-of-the-packages-ive-installed-globally-with-cargo-install)
+> [How do I list all of the RUST packages are installed **globally** with the command **cargo install**?](https://stackoverflow.com/questions/60857222/how-do-i-list-all-of-the-packages-ive-installed-globally-with-cargo-install)
 >
 > ```bash<!-- markdownlint-disable-line code-block-style -->
 > cargo install --list
@@ -136,7 +136,7 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 <!--- THis empty line inside the block is necessary for correct format -->
 &nbsp;
 
-### Speed up Run cargo-tarpaulin inside this project - run /w --target-dir and --skip-clean
+### Acceleration of the program flow through the features cargo-tarpaulin inside this project - run /w --target-dir and --skip-clean
 
 ```bash<!-- markdownlint-disable-line code-block-style -->
 # run /w --target-dir and --skip-clean
@@ -150,8 +150,7 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 >
 > 1. lcov.info
 > 2. rust-example-cov/target/tarpaulin/rust-example-cov-coverage.json
-<!-- -->
-
+<!-- --><!--- This empty line between the blocks is required for the correct format so that they are displayed separately -->
 > [!NOTE]
 > [How To Take A Screenshot under Linux | Computing](https://www.maths.cam.ac.uk/computing/linux/X/screenshots#:~:text=Use%20the%20shortcut%20key%20PrintScreen,will%20capture%20the%20whole%20desktop.)
 > Use the shortcut key PrintScreen to capture the whole
@@ -160,9 +159,9 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 
 ### Enable Show Line Coverage Show Line Coverage in MS VSCode
 
-- Edit the settings of the MS VSCode extension coverage-gutters
-- select for that the settings (gear) icon in the extension overview
-- select the extension option - see image [Show Line Coverage](./img/coverage-gutters-show-line-coverage.png)
+- Edit the settings of the MS VSCode extension **coverage-gutters**
+- Select for that the settings (gear) icon in the extension overview
+- Select the extension option [Show Line Coverage](./img/coverage-gutters-show-line-coverage.png) - see image
 
 ## GITHUB Marker
 
