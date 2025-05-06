@@ -59,6 +59,14 @@ pub fn not_answer() -> u32 {
     43 + 0
 }
 
+pub fn greater_than_5(num: u32) -> u32 {
+    if num > 5 {
+         1
+         } else {
+             0
+             }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -160,6 +168,15 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 - Select for that the settings (gear) icon in the extension overview
 - Select the extension option [Show Line Coverage](./img/coverage-gutters-show-line-coverage.png) - see image
 - Select all Boxes
+
+### [Prettier Rust](https://github.com/jinxdash/prettier-plugin-rust)
+
+
+> [!NOTE]
+> [Prettier](https://prettier.io/docs/editors)
+>
+<!-- --><!--- THis empty line inside the block is necessary for correct format -->
+&nbsp;
 
 ## Markdown Marker - works on GitHub
 
