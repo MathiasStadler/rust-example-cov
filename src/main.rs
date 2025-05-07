@@ -1,3 +1,7 @@
+fn main() {
+    println!("Dummy fn main!");
+}
+
 // prettier-ignore
 pub fn answer() -> u32 {
     // for coverage is a instruction necessary
@@ -44,8 +48,13 @@ mod tests {
   }
 
   #[test]
-  #[should_panic]
-  fn test_no_greater_than_5() {
-    assert_eq!(greater_than_5(4), 1);
+    fn test_greater_than_5() {
+    assert_eq!(greater_than_5(6), 1
+);
+  }
+
+  #[test]
+    fn test_no_greater_than_5() {
+    assert_eq!(greater_than_5(4), 0);
   }
 }

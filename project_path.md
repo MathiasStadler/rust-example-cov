@@ -47,7 +47,15 @@ touch README.md \
 
 ## Add this testcase to /src/main.rs [From Here](https://stackoverflow.com/questions/22697688/how-to-cat-eof-a-file-containing-code)
 
+> [!TIP]
+> Run the script for generate the testcase inside bash terminal
+
 ```bash <!-- markdownlint-disable-line code-block-style -->
+cat << EOF >> ./src/main.rs
+fn main() {
+    println!("Dummy fn main!");
+}
+
 // prettier-ignore
 pub fn answer() -> u32 {
     // for coverage is a instruction necessary
@@ -81,24 +89,30 @@ fn smaller_than_5(num: u32) -> u32 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+  use super::*;
 
-    #[test]
-    fn test_answer() {
-        assert_eq!(answer(), 42);
-    }
+  #[test]
+  fn test_answer() {
+    assert_eq!(answer(), 42);
+  }
 
-    #[test]
-    fn test_not_tested() {
-        assert_eq!(not_tested(), 43);
-    }
+  #[test]
+  fn test_not_tested() {
+    assert_eq!(not_tested(), 43);
+  }
 
-    #[test]
-    #[should_panic]
+  #[test]
+    fn test_greater_than_5() {
+    assert_eq!(greater_than_5(6), 1
+);
+  }
+
+  #[test]
     fn test_no_greater_than_5() {
-        assert_eq!(greater_than_5(4), 1);
-    }
+    assert_eq!(greater_than_5(4), 0);
+  }
 }
+EOF 
 ```
 
 ## [Inserting an additional command line to call a function in the same file](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
