@@ -1,6 +1,6 @@
 # rust_example_cov
 
-    - show how works rust coverage inside MS Vscode using the expansion coverage-gutters
+    - These repo show how works rust coverage inside MS Vscode using the expansion coverage-gutters
     - a rocky road
   :smiley:
 
@@ -169,12 +169,52 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 - Select the extension option [Show Line Coverage](./img/coverage-gutters-show-line-coverage.png) - see image
 - Select all Boxes
 
+### rustfmt
+
+- is rustfmt already installed with which version
+  
+  ```bash <!-- markdownlint-disable-line code-block-style -->
+   rustfmt -V
+        rustfmt 1.8.0-stable (05f9846f89 2025-03-31)
+  ```
+
+- reinstall rustfmt local
+  
+  ```bash <!-- markdownlint-disable-line code-block-style -->
+  # list where is rustfmt already installed - system wide - user /home folder
+  $ ls -l ~/.cargo/bin
+  
+  # remove rustfmt
+  & rm -rf  ~/.cargo/bin/rustfmt
+  ```
+
+  > [!NOTE]
+  > If rustfmt is not installed but it is called, the following error message appears
+  >
+  >```text <!-- markdownlint-disable-line code-block-style -->
+  > [Error - 9:38:34 AM] Request textDocument/formatting failed.
+  > Message: Failed to spawn cd "/home/trapapa/rust-example-cov/src" && "rustfmt" "--edition" "2024"
+  > Code: -32603 
+  > ```
+
 ### [Prettier Rust](https://github.com/jinxdash/prettier-plugin-rust)
 
+> [!NOTE]
+> [Extension Prettier - Code Formatter - How to ignore things - prettier-ignore](https://github.com/jinxdash/prettier-plugin-rust)
+>
+> - Add // prettier-ignore or #[rustfmt::skip] above it
+> - Add #![rustfmt::skip] inside blocks or files
+> - Create a .prettierignore file to glob-match files, like .gitignore
+>
+> ```rust <!-- markdownlint-disable-line code-block-style -->
+>
+>```
+<!-- --><!--- THis empty line inside the block is necessary for correct format -->
+&nbsp;
 
 > [!NOTE]
-> [Prettier](https://prettier.io/docs/editors)
->
+> [Prettier include editor](https://prettier.io/docs/editors)
+
 <!-- --><!--- THis empty line inside the block is necessary for correct format -->
 &nbsp;
 
