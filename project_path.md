@@ -48,23 +48,35 @@ touch README.md \
 ## Add this testcase to /src/main.rs [From Here](https://stackoverflow.com/questions/22697688/how-to-cat-eof-a-file-containing-code)
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
-cat << EOF >> ./src/main.rs
+// prettier-ignore
 pub fn answer() -> u32 {
     // for coverage is a instruction necessary
     42 + 0
 }
 
-pub fn not_answer() -> u32 {
+// prettier-ignore
+pub fn not_tested() -> u32 {
     // for coverage is a instruction necessary
     43 + 0
 }
 
+// prettier-ignore
 pub fn greater_than_5(num: u32) -> u32 {
     if num > 5 {
-         1
-         } else {
-             0
-             }
+        1
+    }else {
+        0
+    }
+}
+
+#[allow(dead_code)]
+// prettier-ignore
+fn smaller_than_5(num: u32) -> u32 {
+    if num < 5 {
+        1
+    } else {
+        0
+    }
 }
 
 #[cfg(test)]
@@ -87,19 +99,18 @@ mod tests {
         assert_eq!(greater_than_5(4), 1);
     }
 }
-EOF
 ```
 
 ## [Inserting an additional command line to call a function in the same file](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
 
 ### [option - Command option for the command itself](https://linux.die.net/man/1/sed)
 
-- -i -> replace insert the file
+- -i &rarr; replace insert the file
 
-### [regex flags - Inside an expression](https://www.codeguage.com/courses/regexp/flags)
+### [regex flags - Inside the regular expression](https://www.codeguage.com/courses/regexp/flags)
 
-- /a `&rarr;` append to the match find by regex
-- \t `&rarr;` add a tabulator
+- /a &rarr; append to the match find by regex
+- \t &rarr; add a tabulator
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 sed -i  '/println!("Hello, world!");/a\
@@ -108,9 +119,10 @@ sed -i  '/println!("Hello, world!");/a\
 
 > [!NOTE]
 > [Insert line after match using sed](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
-<!-- -->
+<!-- -->><!--- THis empty line inside the block is necessary for correct format -->
 > [!NOTE]
 > [When should I use \A in a regex?](https://stackoverflow.com/questions/2650549/when-should-i-use-a-in-a-regex)
+><!--- THis empty line inside the block is necessary for correct format -->
 
 ## Run unit test
 
@@ -118,7 +130,7 @@ sed -i  '/println!("Hello, world!");/a\
 cargo test
 ```
 
-## install extension cargo-tarpaulin
+## Install extension cargo-tarpaulin
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 cargo install cargo-tarpaulin
@@ -141,7 +153,10 @@ cargo tarpaulin --out Lcov
 <!--- THis empty line inside the block is necessary for correct format -->
 &nbsp;
 
-### Acceleration of the program flow through the features cargo-tarpaulin inside this project - run /w --target-dir and --skip-clean
+### Speed up of the program flow through the features
+
+--target-dir $PWD/target/tarpaulin
+--skip-clean
 
 ```bash<!-- markdownlint-disable-line code-block-style -->
 # run /w --target-dir and --skip-clean
@@ -166,8 +181,8 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 
 - Edit the settings of the MS VSCode extension **coverage-gutters**
 - Select for that the settings (gear) icon in the extension overview
-- Select the extension option [Show Line Coverage](./img/coverage-gutters-show-line-coverage.png) - see image
-- Select all Boxes
+- Select **ALL** Boxes extension option show line coverage [see img](./img/coverage-gutters-show-line-coverage.png) - see image
+<!-- --><!--- THis empty line inside the block is necessary for correct format -->
 
 ### rustfmt
 
@@ -178,14 +193,29 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
         rustfmt 1.8.0-stable (05f9846f89 2025-03-31)
   ```
 
-- reinstall rustfmt local
+- install rustfmt local
+  
+```bash <!-- markdownlint-disable-line code-block-style -->
+  
+  
+  # install binary rustfmt
+  &   ```
+
+
+- delete rustfmt local
   
   ```bash <!-- markdownlint-disable-line code-block-style -->
   # list where is rustfmt already installed - system wide - user /home folder
   $ ls -l ~/.cargo/bin
   
-  # remove rustfmt
+  # remove standard way
+  rustup component remove rustfmt
+
+  # FORCE delete binary rustfmt
   & rm -rf  ~/.cargo/bin/rustfmt
+
+  # clean up rustup registry
+  rustup component remove rustfmt
   ```
 
   > [!NOTE]
@@ -196,31 +226,23 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
   > Message: Failed to spawn cd "/home/trapapa/rust-example-cov/src" && "rustfmt" "--edition" "2024"
   > Code: -32603 
   > ```
+  <!-- --><!--- THis empty line inside the block is necessary for correct format -->
 
-### [Prettier Rust](https://github.com/jinxdash/prettier-plugin-rust)
+### [Prettier-Code Formatter Rust](https://github.com/jinxdash/prettier-plugin-rust)
 
 > [!NOTE]
 > [Extension Prettier - Code Formatter - How to ignore things - prettier-ignore](https://github.com/jinxdash/prettier-plugin-rust)
 >
-> - Add // prettier-ignore or #[rustfmt::skip] above it
-> - Add #![rustfmt::skip] inside blocks or files
-> - Create a .prettierignore file to glob-match files, like .gitignore
->
-> ```rust <!-- markdownlint-disable-line code-block-style -->
->
->```
-<!-- --><!--- THis empty line inside the block is necessary for correct format -->
+> - Add // prettier-ignore above instruction it
+> - **DOESN'T WORK FOR WHATEVER REASON**Add #![rustfmt::skip] inside blocks or files
+> <!-- --><!--- THis empty line inside the block is necessary for correct format -->
 &nbsp;
-
-> [!NOTE]
-> Prettier include editor [Link](https://prettier.io/docs/editors)
-<!-- --><!--- THis empty line inside the block is necessary for correct format -->
-&nbsp;
-> [!NOTE]
+> [!IMPORTANT]
 > **TEST FIRST** YOU HAVE THE CORRECT EXTENSION INSTALLED
+> [The correct version of Prettier-Code Formatter for RUST](img/Prettier-Code_Formatter_Rust.png)
+> indicates missing/incorrect version
 > [Prettier-Code Formatter: Can Not Format Rust Files](img/Prettier-Code_Formatter_Can_Not_Rust_Files.png)
-> [The correct version of Prettier-Code Formatter for  RUST](img/Prettier-Code_Formatter_Rust.png)
-> [the wrong version of Prettier-Code Formatter](img/Prettier-Code_Formatter.png)
+> [The wrong version of Prettier-Code Formatter](img/Prettier-Code_Formatter.png)
 <!-- --><!--- THis empty line inside the block is necessary for correct format -->
 &nbsp;
 
@@ -243,7 +265,7 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 <!-- -->
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions
-
+&rarr;
 ## Markdown arrow - works on GitHub
 
 - Up arrow (↑): `&uarr;`
