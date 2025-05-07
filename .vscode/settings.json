@@ -2,6 +2,6 @@
     "[rust]": {
         "editor.formatOnPaste": true,
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "jinxdash.prettier-rust"
     }
 }

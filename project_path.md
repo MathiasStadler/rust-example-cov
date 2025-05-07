@@ -216,8 +216,11 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 > Prettier include editor [Link](https://prettier.io/docs/editors)
 <!-- --><!--- THis empty line inside the block is necessary for correct format -->
 &nbsp;
-> [!TIP]
-> Prettier Not Working for Rust Visual Studio Code [Link](https://stackoverflow.com/questions/75038802/prettier-not-working-for-rust-visual-studio-code)
+> [!NOTE]
+> **TEST FIRST** YOU HAVE THE CORRECT EXTENSION INSTALLED
+> [Prettier-Code Formatter: Can Not Format Rust Files](img/Prettier-Code_Formatter_Can_Not_Rust_Files.png)
+> [The correct version of Prettier-Code Formatter for  RUST](img/Prettier-Code_Formatter_Rust.png)
+> [the wrong version of Prettier-Code Formatter](img/Prettier-Code_Formatter.png)
 <!-- --><!--- THis empty line inside the block is necessary for correct format -->
 &nbsp;
 
