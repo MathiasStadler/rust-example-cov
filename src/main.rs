@@ -16,7 +16,8 @@ pub fn not_tested() -> u32 {
 // prettier-ignore
 pub fn greater_than_5(num: u32) -> u32 {
     // prettier-ignore
-    if num > 5 { 1 } else { 0 }
+    if num > 5 { 1 } 
+    else { 0 }
 }
 
 #[cfg(test)]

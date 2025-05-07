@@ -213,7 +213,13 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 &nbsp;
 
 > [!NOTE]
-> [Prettier include editor](https://prettier.io/docs/editors)
+> Prettier include editor [Link](https://prettier.io/docs/editors)
+<!-- --><!--- THis empty line inside the block is necessary for correct format -->
+&nbsp;
+> [!TIP]
+> Prettier Not Working for Rust Visual Studio Code [Link](https://stackoverflow.com/questions/75038802/prettier-not-working-for-rust-visual-studio-code)
+<!-- --><!--- THis empty line inside the block is necessary for correct format -->
+&nbsp;
 
 <!-- --><!--- THis empty line inside the block is necessary for correct format -->
 &nbsp;

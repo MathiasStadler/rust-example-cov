@@ -1,8 +1,7 @@
 {
-    "cSpell.words": [
-        "println",
-        "rustup",
-        "tarpulin",
-        "trapapa"
-    ]
+    "[rust]": {
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
