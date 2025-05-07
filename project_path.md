@@ -119,7 +119,7 @@ sed -i  '/println!("Hello, world!");/a\
 
 > [!NOTE]
 > [Insert line after match using sed](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
-<!-- -->><!--- THis empty line inside the block is necessary for correct format -->
+<!-- --><!--- THis empty line inside the block is necessary for correct format -->
 > [!NOTE]
 > [When should I use \A in a regex?](https://stackoverflow.com/questions/2650549/when-should-i-use-a-in-a-regex)
 ><!--- THis empty line inside the block is necessary for correct format -->
@@ -155,8 +155,8 @@ cargo tarpaulin --out Lcov
 
 ### Speed up of the program flow through the features
 
---target-dir $PWD/target/tarpaulin
---skip-clean
+- --target-dir $PWD/target/tarpaulin
+- --skip-clean
 
 ```bash<!-- markdownlint-disable-line code-block-style -->
 # run /w --target-dir and --skip-clean
