@@ -10,7 +10,7 @@
 > ><!--- THis empty line is necessary for correct format -->
 &nbsp
 
-## Start Date of project <span class="heading-link-symbol" aria-hidden="true"></span>
+## Start Date of project </span>
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 date
