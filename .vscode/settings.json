@@ -4,6 +4,7 @@
         "println",
         "rustup",
         "tarpulin",
+        "tcsh",
         "trapapa"
     ]
 }

@@ -1,26 +1,33 @@
+<!-- Link sign don't Found a better way :-( - You know a better method? -->
+ <!-- markdownlint-disable-line first-line-h1 -->
+
 # rust_example_cov
 
     - These repo show how works rust coverage inside MS Vscode 
     using the expansion coverage-gutters
-    - a rocky road
-  :smiley:
+    - a rocky road  
 
 > [!TIP]
-> [Comments Inside JSON – Commenting in a JSON File](https://www.freecodecamp.org/news/comments-in-json/)
-><!--- THis empty line is necessary for correct format -->
-&nbsp
-
+> GITHUB Basic writing and formatting syntax [![alt text][1]](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+<!-- -->  
+> [!TIP]
+> Comments Inside JSON – Commenting in a JSON File [![alt text][1]](https://www.freecodecamp.org/news/comments-in-json/)
+<!-- -->
 > [!TIP]
 ><!--- THis empty line is necessary for correct format -->
-> - Test image as link text for a markdown link
-> - [FROM hER](https://meta.stackexchange.com/questions/2133/whats-the-recommended-syntax-for-an-image-with-a-link)
+> - Test image as link text for a markdown link [![alt text][1]](https://meta.stackexchange.com/questions/2133/whats-the-recommended-syntax-for-an-image-with-a-link)
 >
 > Test link image for a Markdown link text [![alt text][1]][2]
-
+>
 [1]: ./img/link_symbol.svg
 [2]: https://meta.stackexchange.com/questions/2133/whats-the-recommended-syntax-for-an-image-with-a-link
 ><!--- THis empty line is necessary for correct format -->
-&nbsp
+<!-- -->
+
+<!-- 
+Markdown Preview Github Styling
+GitHub Markdown Preview /w markdown list and other add ones
+-->
 
 ## Start Date of project </span>
 
@@ -36,12 +43,17 @@ uname -a
 Linux debian 6.1.0-28-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.119-1 (2024-11-22) x86_64 GNU/Linux
 ```
 
-## Create project folder via the linux console e.g. inside your own home directory
+## Create for your own project a project folder in the Linux console (terminal ,bash shell), e.g. in your your own home directory, and then open this folder as a new project in the MS VSCODE program
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 # cd && mkdir <project_name> && cd $_
 cd && mkdir rust-example-cov && cd $_ 
 ```
+<!-- -->
+
+>[!TIP]
+> Don't forget to save your project on GitHub - saves you serious headaches
+<!-- -->
 
 ## Init a new rust based project inside the previously generated folder
 
@@ -66,13 +78,29 @@ touch README.md \
 ## Replace /src/main.rs with follow testcase
 
 >[!TIP]
-> How to cat eof a file containing code  [From Here](https://stackoverflow.com/questions/22697688/how-to-cat-eof-a-file-containing-code)
+> How to cat ```<<EOF>>``` a file containing code
+> Test link image for a Markdown link text [![alt text][1]](https://stackoverflow.com/questions/22697688/how-to-cat-eof-a-file-containing-code)
+>
 ><!--- THis empty line inside the block is necessary for correct format -->
-&nbsp
+<!-- -->
 > [!NOTE]
 > Run the bash script for generate the testcase inside a normal terminal - not MS VSCODE terminal
 ><!--- THis empty line is necessary for correct format -->
-&nbsp
+<!-- -->
+> [!TIP]
+> The ***terminal*** is the GUI window that you see
+> on the screen. It takes commands and shows output.
+>
+> The **shell** is the software that interprets and
+> executes the various commands that we type in the
+> terminal.
+>
+> ***Bash*** (Bourne-again SHell) is a particular shell. It stands > for Bourne Again Shell. Some other examples of shell
+>  are sh>>> (bourne shell), csh(c shell), tcsh(turbo c shell) etc.
+>
+> CLI(Command Line Interface) refers to a user interface in
+> computers where users type in commands and see the results
+> printed on the screen.
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 cat << EOF >> ./src/main.rs
@@ -162,7 +190,7 @@ sed -i  '/println!("Hello, world!");/a\
 > [When should I use \A in a regex?](https://stackoverflow.com/questions/2650549/when-should-i-use-a-in-a-regex)
 ><!--- THis empty line inside the block is necessary for correct format -->
 
-## Run unit test
+## Run all UNIT test of project
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 cargo test
@@ -234,11 +262,8 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 - install rustfmt local
   
 ```bash <!-- markdownlint-disable-line code-block-style -->
-  
-  
-  # install binary rustfmt
-  &   ```
-
+rustup component add rustfmt
+```
 
 - delete rustfmt local
   
@@ -247,13 +272,13 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
   $ ls -l ~/.cargo/bin
   
   # remove standard way
-  rustup component remove rustfmt
+  $ rustup component remove rustfmt
 
   # FORCE delete binary rustfmt
-  & rm -rf  ~/.cargo/bin/rustfmt
+  $ rm -rf  ~/.cargo/bin/rustfmt
 
-  # clean up rustup registry
-  rustup component remove rustfmt
+  # clean up rustup registry - same how standard way
+  $ rustup component remove rustfmt
   ```
 
   > [!NOTE]
@@ -261,7 +286,8 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
   >
   >```text <!-- markdownlint-disable-line code-block-style -->
   > [Error - 9:38:34 AM] Request textDocument/formatting failed.
-  > Message: Failed to spawn cd "/home/trapapa/rust-example-cov/src" && "rustfmt" "--edition" "2024"
+  > Message: Failed to spawn cd "/home/trapapa/rust-example-cov/src" 
+  > && "rustfmt" "--edition" "2024"
   > Code: -32603 
   > ```
   <!-- --><!--- THis empty line inside the block is necessary for correct format -->
