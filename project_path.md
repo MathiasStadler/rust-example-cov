@@ -269,7 +269,8 @@ cargo tarpaulin --ignore-tests --target-dir $PWD/target/tarpaulin --skip-clean -
 
 - Edit the settings of the MS VSCode extension **coverage-gutters**
 - Select for that the settings (gear) icon in the extension overview
-- Select **ALL** Boxes extension option show line coverage [see img](./img/coverage-gutters-show-line-coverage.png) - see image
+- Select **ALL** Boxes extension option show line coverage  <!-- [see img](./img/coverage-gutters-show-line-coverage.png) - see image -->
+- ![alt text](./img/coverage-gutters-show-line-coverage.png "Title")
 <!-- --><!--- THis empty line inside the block is necessary for correct format -->
 
 ### rustfmt
