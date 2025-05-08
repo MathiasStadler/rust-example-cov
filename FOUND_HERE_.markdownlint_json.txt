@@ -1,0 +1,2 @@
+# FOUND HERE
+# https://stackoverflow.com/questions/72368493/allow-some-html-elements-in-markdown-lint-rule-md033-in-visual-studio-code

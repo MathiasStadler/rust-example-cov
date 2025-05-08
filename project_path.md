@@ -1,31 +1,37 @@
 # rust_example_cov
 
-    - These repo show how works rust coverage inside MS Vscode using the expansion coverage-gutters
+    - These repo show how works rust coverage inside MS Vscode 
+    using the expansion coverage-gutters
     - a rocky road
   :smiley:
 
-## date today
+> [!TIP]
+> [Comments Inside JSON – Commenting in a JSON File](https://www.freecodecamp.org/news/comments-in-json/)
+> ><!--- THis empty line is necessary for correct format -->
+&nbsp
+
+## Start Date of project <span class="heading-link-symbol" aria-hidden="true"></span>
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 date
 Tue May  6 09:30:59 AM CEST 2025
 ```
 
-## os- version
+## OS-Version
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 uname -a
 Linux debian 6.1.0-28-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.119-1 (2024-11-22) x86_64 GNU/Linux
 ```
 
-## create project folder on linux console e.g. inside your own home directory
+## Create project folder via the linux console e.g. inside your own home directory
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 # cd && mkdir <project_name> && cd $_
 cd && mkdir rust-example-cov && cd $_ 
 ```
 
-## init
+## Init a new rust based project inside the previously generated folder
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 touch README.md \
@@ -45,10 +51,16 @@ touch README.md \
 && mkdir tests
 ```
 
-## Add this testcase to /src/main.rs [From Here](https://stackoverflow.com/questions/22697688/how-to-cat-eof-a-file-containing-code)
+## Replace /src/main.rs with follow testcase
 
-> [!TIP]
-> Run the script for generate the testcase inside bash terminal
+>[!TIP]
+> How to cat eof a file containing code  [From Here](https://stackoverflow.com/questions/22697688/how-to-cat-eof-a-file-containing-code)
+><!--- THis empty line inside the block is necessary for correct format -->
+&nbsp
+> [!NOTE]
+> Run the bash script for generate the testcase inside a normal terminal - not MS VSCODE terminal
+><!--- THis empty line is necessary for correct format -->
+&nbsp
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 cat << EOF >> ./src/main.rs
@@ -115,13 +127,13 @@ mod tests {
 EOF 
 ```
 
-## [Inserting an additional command line to call a function in the same file](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
+## [Inserting an additional command line to call a function in the file](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
 
-### [option - Command option for the command itself](https://linux.die.net/man/1/sed)
+### option - Command option for the command itself [Link](https://linux.die.net/man/1/sed)
 
 - -i &rarr; replace insert the file
 
-### [regex flags - Inside the regular expression](https://www.codeguage.com/courses/regexp/flags)
+### regex flags - Inside the regular expression [Link](https://www.codeguage.com/courses/regexp/flags)
 
 - /a &rarr; append to the match find by regex
 - \t &rarr; add a tabulator
@@ -280,6 +292,7 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions
 &rarr;
+
 ## Markdown arrow - works on GitHub
 
 - Up arrow (↑): `&uarr;`
