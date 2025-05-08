@@ -11,13 +11,14 @@
 &nbsp
 
 > [!TIP]
->Test image as link text for a markdown link
-> [FROM hER](https://meta.stackexchange.com/questions/2133/whats-the-recommended-syntax-for-an-image-with-a-link)
+><!--- THis empty line is necessary for correct format -->
+> - Test image as link text for a markdown link
+> - [FROM hER](https://meta.stackexchange.com/questions/2133/whats-the-recommended-syntax-for-an-image-with-a-link)
 >
-> [![alt text][1]][2]
+> Test link image for a Markdown link text [![alt text][1]][2]
 
-[1]: https://i.sstatic.net/wPW28.png
-[2]: https://www.timeanddate.com/astronomy/moon/light.html?month=3&day=20&year=2040&hour=19&min=00&sec=0&n=64&ntxt=Chicago&earth=0
+[1]: ./img/link_symbol.svg
+[2]: https://meta.stackexchange.com/questions/2133/whats-the-recommended-syntax-for-an-image-with-a-link
 ><!--- THis empty line is necessary for correct format -->
 &nbsp
 
