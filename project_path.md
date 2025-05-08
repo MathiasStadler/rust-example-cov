@@ -392,6 +392,11 @@ rustup component add rustfmt
 |:---------------------------|
 | Will explode when clicked! |
 
+## Creative Commons BY-SA Icon [alt text][1]]("https://i.creativecommons.org/l/by-sa/4.0/80x15.png">
+
+<img style="vertical-align:middle" alt="Creative Commons BY-SA" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png">
+
+
 <!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
 [1]: ./img/link_symbol.svg
   
