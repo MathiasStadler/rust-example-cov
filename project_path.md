@@ -89,22 +89,27 @@ touch README.md \
 > [!TIP]
 > Difference between Terminal, Shell and Bash [![alt text][1]](https://medium.com/@krish.raghuram/terminal-shell-and-bash-3e76218c8865)
 >
-> The ***terminal*** is the GUI window that you see
+> - The ***terminal*** is the GUI window that you see
 > on the screen. It takes commands and shows output.
 >
-> The **shell** is the software that interprets and
+> - The **shell** is the software that interprets and
 > executes the various commands that we type in the
 > terminal.
 >
-> ***Bash*** (Bourne-again SHell) is a particular shell.
+> - The ***Bash*** (Bourne-again SHell) Shell is a particular shell.
 > It stands > for Bourne Again Shell. Some other examples of shell
 > are
 >
-> - zsh
+>   - zsh
 >
->> Zsh is a shell designed for interactive use, although it is also a powerful scripting language
+>     Zsh is a shell designed for interactive
+>     use, although it is also a powerful
+>     scripting language
 >
-> - sh>>> (bourne shell)
+> - bash
+>     bourne shell default shell for most
+>     Linux/Unix based system
+>
 > - csh(c shell)
 > - tcsh(turbo c shell)
 >
@@ -112,7 +117,7 @@ touch README.md \
 > computers where users type in commands and see the results
 > printed on the screen.
 
-## Replace /src/main.rs with follow testcase
+## Replace /src/main.rs generate from command ```cargo init``` with follow testcase
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 cat << EOF >> ./src/main.rs
@@ -179,23 +184,29 @@ mod tests {
 EOF 
 ```
 
-## Inserting an additional command line to call a function in the file [![alt text][1]](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
+## GNU sed - sed, a stream editor [![alt text][1]](https://www.gnu.org/software/sed/manual/sed.html)
 
-### option - Command option for the command itself [![alt text][1]](https://linux.die.net/man/1/sed)
+> [!TIP]
+> Good Instruction in GNU sed - A Practical Guide to GNU sed With Examples [![alt text][1]](https://thevaluable.dev/sed-cli-practical-guide-examples/)
+
+### Inserting an additional command line to call a function in the file [![alt text][1]](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
+
+### sed option - Command option for the command itself [![alt text][1]](https://linux.die.net/man/1/sed)
 
 - -i &rarr; replace insert the file
+  - option **-i** sed writes output to standard output. Use -i to edit files in-place instead of printing to standard output. See also the W and s///w commands for writing output to other files. The following command modifies file.txt and does not produce any output:
 
-### regex flags - Inside the regular expression [![alt text][1]](https://www.codeguage.com/courses/regexp/flags)
+### regular expression flags - Inside the regular expression [![alt text][1]](https://www.codeguage.com/courses/regexp/flags)
 
-- /a &rarr; append to the match find by regex
-- \t &rarr; add a tabulator
+- /a &rarr; append to the match found by regex
+- \t &rarr; add a tabulator to line
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 sed -i  '/println!("Hello, world!");/a\
 \tprintln!("{} {} ", answer(), not_tested());' src/main.rs
 ```
 
-> [!NOTE]
+> [!Note]
 > Insert line after match using sed [![alt text][1]](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
 <!-- --><!--- THis empty line inside the block is necessary for correct format -->
 > [!NOTE]
@@ -361,6 +372,25 @@ rustup component add rustfmt
 - Left arrow (←): `&larr;`
 - Right arrow (→): `&rarr;`
 - Double headed arrow (↔): `&harr;`
+
+## Another  good-looking notification or warning box in Github Flavoured Markdown?[![alt text][1]](https://stackoverflow.com/questions/58737436/how-to-create-a-good-looking-notification-or-warning-box-in-github-flavoured-mar)
+
+| :memo:        | Take note of this       |
+|---------------|:------------------------|
+
+| :point_up:    | Remember to not forget! |
+|---------------|:------------------------|
+
+| :link:    | Link to click! |
+|---------------|:------------------------|
+
+| :warning: WARNING          |
+|:---------------------------|
+| I should warn you ...      |
+
+| :boom: DANGER              |
+|:---------------------------|
+| Will explode when clicked! |
 
 <!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
 [1]: ./img/link_symbol.svg
