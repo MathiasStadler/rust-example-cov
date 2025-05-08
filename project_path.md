@@ -1,6 +1,3 @@
-<!-- Link sign don't Found a better way :-( - You know a better method? -->
- <!-- markdownlint-disable-line first-line-h1 -->
-
 # rust_example_cov
 
     - These repo show how works rust coverage inside MS Vscode 
@@ -15,11 +12,16 @@
 <!-- -->
 > [!TIP]
 ><!--- THis empty line is necessary for correct format -->
-> - Test image as link text for a markdown link [![alt text][1]](https://meta.stackexchange.com/questions/2133/whats-the-recommended-syntax-for-an-image-with-a-link)
+> - Image as link text for a markdown link [![alt text][1]](https://meta.stackexchange.com/questions/2133/whats-the-recommended-syntax-for-an-image-with-a-link)
 >
-> Test link image for a Markdown link text [![alt text][1]][2]
+> - Whats the recommended syntax for an image with a link? [![alt text][1]][2]
 >
+> ```
+> [![alt text][1]](https://stackoverflow.com/questions/22697688/how-to-cat-eof-a-file-containing-code)
+> ```
+<!--
 [1]: ./img/link_symbol.svg
+-->
 [2]: https://meta.stackexchange.com/questions/2133/whats-the-recommended-syntax-for-an-image-with-a-link
 ><!--- THis empty line is necessary for correct format -->
 <!-- -->
@@ -29,34 +31,33 @@ Markdown Preview Github Styling
 GitHub Markdown Preview /w markdown list and other add ones
 -->
 
-## Start Date of project </span>
+## Start Date of project
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
-date
+$ date
 Tue May  6 09:30:59 AM CEST 2025
 ```
 
 ## OS-Version
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
-uname -a
+$ uname -a
 Linux debian 6.1.0-28-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.119-1 (2024-11-22) x86_64 GNU/Linux
 ```
 
 ## Create for your own project a project folder in the Linux console (terminal ,bash shell), e.g. in your your own home directory, and then open this folder as a new project in the MS VSCODE program
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
-# cd && mkdir <project_name> && cd $_
+# cd && mkdir <project_name folder> && cd $_
+# command 'cd' change to home folder from logged in user
 cd && mkdir rust-example-cov && cd $_ 
 ```
 <!-- -->
-
 >[!TIP]
 > Don't forget to save your project on GitHub - saves you serious headaches
 <!-- -->
-
 ## Init a new rust based project inside the previously generated folder
-
+<!-- -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 touch README.md \
 && ln -s README.md README \
@@ -74,9 +75,7 @@ touch README.md \
 && rustup show \
 && mkdir tests
 ```
-
-## Replace /src/main.rs with follow testcase
-
+<!-- -->
 >[!TIP]
 > How to cat ```<<EOF>>``` a file containing code
 > Test link image for a Markdown link text [![alt text][1]](https://stackoverflow.com/questions/22697688/how-to-cat-eof-a-file-containing-code)
@@ -88,6 +87,8 @@ touch README.md \
 ><!--- THis empty line is necessary for correct format -->
 <!-- -->
 > [!TIP]
+> Difference between Terminal, Shell and Bash [![alt text][1]](https://medium.com/@krish.raghuram/terminal-shell-and-bash-3e76218c8865)
+>
 > The ***terminal*** is the GUI window that you see
 > on the screen. It takes commands and shows output.
 >
@@ -95,12 +96,23 @@ touch README.md \
 > executes the various commands that we type in the
 > terminal.
 >
-> ***Bash*** (Bourne-again SHell) is a particular shell. It stands > for Bourne Again Shell. Some other examples of shell
->  are sh>>> (bourne shell), csh(c shell), tcsh(turbo c shell) etc.
+> ***Bash*** (Bourne-again SHell) is a particular shell.
+> It stands > for Bourne Again Shell. Some other examples of shell
+> are
 >
-> CLI(Command Line Interface) refers to a user interface in
+> - zsh
+>
+>> Zsh is a shell designed for interactive use, although it is also a powerful scripting language
+>
+> - sh>>> (bourne shell)
+> - csh(c shell)
+> - tcsh(turbo c shell)
+>
+> ***CLI(Command Line Interface)*** refers to a user interface in
 > computers where users type in commands and see the results
 > printed on the screen.
+
+## Replace /src/main.rs with follow testcase
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 cat << EOF >> ./src/main.rs
@@ -167,13 +179,13 @@ mod tests {
 EOF 
 ```
 
-## [Inserting an additional command line to call a function in the file](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
+## Inserting an additional command line to call a function in the file [![alt text][1]](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
 
-### option - Command option for the command itself [Link](https://linux.die.net/man/1/sed)
+### option - Command option for the command itself [![alt text][1]](https://linux.die.net/man/1/sed)
 
 - -i &rarr; replace insert the file
 
-### regex flags - Inside the regular expression [Link](https://www.codeguage.com/courses/regexp/flags)
+### regex flags - Inside the regular expression [![alt text][1]](https://www.codeguage.com/courses/regexp/flags)
 
 - /a &rarr; append to the match find by regex
 - \t &rarr; add a tabulator
@@ -184,10 +196,10 @@ sed -i  '/println!("Hello, world!");/a\
 ```
 
 > [!NOTE]
-> [Insert line after match using sed](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
+> Insert line after match using sed [![alt text][1]](https://stackoverflow.com/questions/15559359/insert-line-after-match-using-sed)
 <!-- --><!--- THis empty line inside the block is necessary for correct format -->
 > [!NOTE]
-> [When should I use \A in a regex?](https://stackoverflow.com/questions/2650549/when-should-i-use-a-in-a-regex)
+> When should I use \A in a regex? [![alt text][1]](https://stackoverflow.com/questions/2650549/when-should-i-use-a-in-a-regex)
 ><!--- THis empty line inside the block is necessary for correct format -->
 
 ## Run all UNIT test of project
@@ -196,14 +208,16 @@ sed -i  '/println!("Hello, world!");/a\
 cargo test
 ```
 
-## Install extension cargo-tarpaulin
+## Install extension cargo-tarpaulin [![alt text][1]](https://crates.io/crates/cargo-tarpaulin)
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 cargo install cargo-tarpaulin
 ```
 <!--- THis empty line is necessary for correct format -->
 > [!NOTE]
-> [How do I list all of the RUST packages are installed **globally** with the command **cargo install**?](https://stackoverflow.com/questions/60857222/how-do-i-list-all-of-the-packages-ive-installed-globally-with-cargo-install)
+> How do I list all of the RUST packages
+> are installed **globally** with the
+> command **cargo install**?[![alt text][1]](https://stackoverflow.com/questions/60857222/how-do-i-list-all-of-the-packages-ive-installed-globally-with-cargo-install)
 >
 > ```bash<!-- markdownlint-disable-line code-block-style -->
 > cargo install --list
@@ -219,14 +233,20 @@ cargo tarpaulin --out Lcov
 <!--- THis empty line inside the block is necessary for correct format -->
 &nbsp;
 
+## Set output format for MS VSCODE extension coverage-gutters [![alt text][1]](https://marketplace.visualstudio.com/items/?itemName=ryanluker.vscode-coverage-gutters)
+
+- --out Lcov
+- and more for other extensions
+
 ### Speed up of the program flow through the features
 
 - --target-dir $PWD/target/tarpaulin
 - --skip-clean
+- --ignore-tests
 
 ```bash<!-- markdownlint-disable-line code-block-style -->
-# run /w --target-dir and --skip-clean
-cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --skip-clean
+# run /w --target-dir , --ignore-tests and --skip-clean
+cargo tarpaulin --ignore-tests --target-dir $PWD/target/tarpaulin --skip-clean --out Lcov
 ```
 <!-- --><!--- THis empty line inside the block is necessary for correct format -->
 &nbsp;
@@ -237,13 +257,15 @@ cargo tarpaulin --ignore-tests --out Lcov --target-dir $PWD/target/tarpaulin --s
 > 1. lcov.info
 > 2. rust-example-cov/target/tarpaulin/rust-example-cov-coverage.json
 <!-- --><!--- This empty line between the blocks is required for the correct format so that they are displayed separately -->
-> [!NOTE]
-> [How To Take A Screenshot under Linux | Computing](https://www.maths.cam.ac.uk/computing/linux/X/screenshots#:~:text=Use%20the%20shortcut%20key%20PrintScreen,will%20capture%20the%20whole%20desktop.)
-> Use the shortcut key PrintScreen to capture the whole
-> desktop and Alt+PrintScreen to capture the current
-> window (these also work under Windows).
+> [!TIP]
+>
+> - How To Take A Screenshot under Linux | Computing [![alt text][1]](https://www.maths.cam.ac.uk/computing/linux/X/screenshots#:~:text=Use%20the%20shortcut%20key%20PrintScreen,will%20capture%20the%20whole%20desktop.)
+>
+>   - Use the shortcut key [PrintScreen] find on your Keyboard to capture the whole desktop
+>   - To capture the current windows or select the area [Alt]+[PrintScreen]
+>
 
-### Enable Show Line Coverage Show Line Coverage in MS VSCode
+### Enable Show Line Coverage in MS VSCode
 
 - Edit the settings of the MS VSCode extension **coverage-gutters**
 - Select for that the settings (gear) icon in the extension overview
@@ -338,4 +360,7 @@ rustup component add rustfmt
 - Left arrow (←): `&larr;`
 - Right arrow (→): `&rarr;`
 - Double headed arrow (↔): `&harr;`
+
+<!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
+[1]: ./img/link_symbol.svg
   
